@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,700,700i')
+
+
+.circlered
+  animation: circle 0.2s forwards
+  fill: none
+a
+  $delay: 0
+  @for $i from 1 through 43
+    $delay: $delay+0.1
+    &:nth-of-type(#{$i}) .circlered
+      animation-delay: #{$delay}s
+
+.circleyel
+  animation: circle2 0.2s forwards
+  fill: none
+a
+  $delay: 0
+  @for $i from 1 through 16
+    $delay: $delay+0.2
+    &:nth-of-type(#{$i}) .circleyel
+      animation-delay: #{$delay}s
+  
+ 
+
+  
+  
+texthover:hover
+  fill: blue
+
+   
+  
+
+.ligne
+  fill: none
+  stroke-width: 3
+  stroke-linecap: round
+  stroke-miterlimit: 10
+  stroke-dasharray: 1250
+  animation: ligne 4.2s linear reverse forwards
+
+.ligne2
+  stroke: #F06060
+
+.ligne1
+  stroke: #F3B562
+
+.arrets
+
+  font-family: 'Open Sans'
+  font-weight: 300
+  font-size: 10px
+
+
+.trait
+  fill: none
+  stroke: #000000
+  stroke-width: 0.3
+  stroke-miterlimit: 10
+
+.terminus
+  font-family: 'Open Sans'
+  font-weight: 700
+  font-size: 12px
+
+.villeter
+  font-family: 'Open Sans'
+  font-weight: 700
+  font-style: italic
+  font-size: 10px
+  
+  .arrets
+    animation: textap 2s infinite
+    
+@keyframe textap
+  from
+    fill: white
+  to
+    fill: black
+
+@keyframes ligne
+  from
+    stroke-dashoffset: 2500
+  to
+    stroke-dashoffset: 3750
+
+@keyframes circle
+  from
+    r: 0
+  to
+    fill: #F06060
+    
+@keyframes circle2
+  from
+    r: 0
+  to
+    fill: #F3B562
